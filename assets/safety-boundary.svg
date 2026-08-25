@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" viewBox="0 0 1080 420" role="img" aria-labelledby="title desc">
+  <title id="title">ComfyUI safety boundary</title>
+  <desc id="desc">The input, approval, and verified-output safety boundaries for ComfyUI.</desc>
+  <rect width="1080" height="420" rx="28" fill="#F8FAFC"/>
+  <style>text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }</style>
+  <rect x="0" y="0" width="1080" height="14" rx="7" fill="#7C3AED"/>
+  <text x="54" y="66" font-size="15" font-weight="750" fill="#7C3AED"><tspan x="54" dy="0">TRUST AND SAFETY BOUNDARY</tspan></text>
+  <text x="54" y="112" font-size="30" font-weight="750" fill="#0F172A"><tspan x="54" dy="0">ComfyUI</tspan></text>
+  <rect x="54" y="190" width="270" height="112" rx="18" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="80" y="232" font-size="19" font-weight="700" fill="#0F172A"><tspan x="80" dy="0">1  Bounded input</tspan></text>
+  <text x="80" y="264" font-size="17" font-weight="400" fill="#475569"><tspan x="80" dy="0">Goal, authority,</tspan><tspan x="80" dy="23">target, constraints</tspan></text>
+  <rect x="405" y="190" width="270" height="112" rx="18" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+  <text x="431" y="232" font-size="19" font-weight="700" fill="#7C3AED"><tspan x="431" dy="0">2  Preview + approval</tspan></text>
+  <text x="431" y="264" font-size="17" font-weight="400" fill="#475569"><tspan x="431" dy="0">Stop when access or</tspan><tspan x="431" dy="23">intent is ambiguous</tspan></text>
+  <rect x="756" y="190" width="270" height="112" rx="18" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="782" y="232" font-size="19" font-weight="700" fill="#0F172A"><tspan x="782" dy="0">3  Verified output</tspan></text>
+  <text x="782" y="264" font-size="17" font-weight="400" fill="#475569"><tspan x="782" dy="0">Result, evidence,</tspan><tspan x="782" dy="23">limits, next action</tspan></text>
+  <path d="M324 246 H397" stroke="#7C3AED" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M675 246 H748" stroke="#7C3AED" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="54" y="362" font-size="19" font-weight="550" fill="#334155"><tspan x="54" dy="0">Consequential writes pause at the approval boundary.</tspan></text>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7C3AED"/></marker></defs>
+</svg>

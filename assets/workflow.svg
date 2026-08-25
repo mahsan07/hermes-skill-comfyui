@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="868" viewBox="0 0 860 868" role="img" aria-labelledby="title desc">
+  <title id="title">ComfyUI workflow</title>
+  <desc id="desc">A 6-step vertical workflow for ComfyUI.</desc>
+  <rect width="860" height="868" rx="28" fill="#F8FAFC"/>
+  <style>text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }</style>
+  <rect x="0" y="0" width="860" height="14" rx="7" fill="#7C3AED"/>
+<text x="60" y="72" font-size="15" font-weight="750" fill="#7C3AED"><tspan x="60" dy="0">HOW THE WORKFLOW MOVES</tspan></text>
+<text x="60" y="118" font-size="32" font-weight="750" fill="#0F172A"><tspan x="60" dy="0">ComfyUI</tspan></text>
+  <rect x="60" y="166" width="740" height="86" rx="17" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="106" cy="209" r="24" fill="#EDE9FE"/>
+  <text x="99" y="217" font-size="22" font-weight="750" fill="#7C3AED">1</text>
+<text x="150" y="203" font-size="20" font-weight="600" fill="#1E293B"><tspan x="150" dy="0">Translate the request into a bounded creative brief</tspan></text>
+  <path d="M106 252 V281" stroke="#7C3AED" stroke-width="3"/>
+  <rect x="60" y="284" width="740" height="86" rx="17" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="106" cy="327" r="24" fill="#EDE9FE"/>
+  <text x="99" y="335" font-size="22" font-weight="750" fill="#7C3AED">2</text>
+<text x="150" y="321" font-size="20" font-weight="600" fill="#1E293B"><tspan x="150" dy="0">Inspect supplied assets and usage constraints</tspan></text>
+  <path d="M106 370 V399" stroke="#7C3AED" stroke-width="3"/>
+  <rect x="60" y="402" width="740" height="86" rx="17" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="106" cy="445" r="24" fill="#EDE9FE"/>
+  <text x="99" y="453" font-size="22" font-weight="750" fill="#7C3AED">3</text>
+<text x="150" y="439" font-size="20" font-weight="600" fill="#1E293B"><tspan x="150" dy="0">Choose the appropriate format and production path</tspan></text>
+  <path d="M106 488 V517" stroke="#7C3AED" stroke-width="3"/>
+  <rect x="60" y="520" width="740" height="86" rx="17" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="106" cy="563" r="24" fill="#EDE9FE"/>
+  <text x="99" y="571" font-size="22" font-weight="750" fill="#7C3AED">4</text>
+<text x="150" y="557" font-size="20" font-weight="600" fill="#1E293B"><tspan x="150" dy="0">Create a first reviewable artifact</tspan></text>
+  <path d="M106 606 V635" stroke="#7C3AED" stroke-width="3"/>
+  <rect x="60" y="638" width="740" height="86" rx="17" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="106" cy="681" r="24" fill="#EDE9FE"/>
+  <text x="99" y="689" font-size="22" font-weight="750" fill="#7C3AED">5</text>
+<text x="150" y="675" font-size="20" font-weight="600" fill="#1E293B"><tspan x="150" dy="0">Check legibility, fidelity, and export behavior</tspan></text>
+  <path d="M106 724 V753" stroke="#7C3AED" stroke-width="3"/>
+  <rect x="60" y="756" width="740" height="86" rx="17" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <circle cx="106" cy="799" r="24" fill="#EDE9FE"/>
+  <text x="99" y="807" font-size="22" font-weight="750" fill="#7C3AED">6</text>
+<text x="150" y="793" font-size="20" font-weight="600" fill="#1E293B"><tspan x="150" dy="0">Deliver the artifact with revision guidance</tspan></text>
+</svg>
