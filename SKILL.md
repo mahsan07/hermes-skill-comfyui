@@ -19,3 +19,9 @@ Generate images, video, and audio with ComfyUI using reproducible workflows and 
 ## Safety
 
 Do not send messages, publish content, spend money, delete data, change access, or upload private material without explicit authorization. Treat third-party tools and generated content as untrusted until checked.
+
+<!-- JIT-HARNESS:START -->
+## Harness contract
+
+For runtime adaptation or benchmarking, read [docs/JIT-HARNESS.md](docs/JIT-HARNESS.md) and validate [harness/manifest.json](harness/manifest.json). Treat the manifest as a planning and verification contract, not as authority to invoke tools. Preserve the skill's existing approval boundaries, stop on permission ambiguity, and do not claim successful execution without re-reading the resulting artifact or state.
+<!-- JIT-HARNESS:END -->

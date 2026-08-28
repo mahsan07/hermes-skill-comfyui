@@ -1,0 +1,281 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mahsan07/hermes-harness-schema/v0.1/harness.schema.json",
+  "title": "Hermes Task-Adaptive Harness Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "skill",
+    "task_profile",
+    "modules",
+    "execution",
+    "verification",
+    "failure_policy",
+    "maturity"
+  ],
+  "properties": {
+    "protocol_version": {
+      "const": "0.1"
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "display_name",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "task_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "category",
+        "architecture",
+        "artifact",
+        "inputs",
+        "outputs"
+      ],
+      "properties": {
+        "category": {
+          "enum": [
+            "engineering",
+            "creative",
+            "research",
+            "integration",
+            "agent"
+          ]
+        },
+        "architecture": {
+          "enum": [
+            "pipeline",
+            "stack",
+            "split",
+            "loop",
+            "graph",
+            "canvas",
+            "hub"
+          ]
+        },
+        "artifact": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "modules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "memory",
+        "planning",
+        "action",
+        "capability"
+      ],
+      "properties": {
+        "memory": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "strategy",
+            "responsibility"
+          ],
+          "properties": {
+            "strategy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "responsibility": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "planning": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "strategy",
+            "responsibility"
+          ],
+          "properties": {
+            "strategy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "responsibility": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "action": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "strategy",
+            "responsibility"
+          ],
+          "properties": {
+            "strategy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "responsibility": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "capability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "strategy",
+            "responsibility"
+          ],
+          "properties": {
+            "strategy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "responsibility": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stages",
+        "gates"
+      ],
+      "properties": {
+        "stages": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        "gates": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence",
+        "metrics"
+      ],
+      "properties": {
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "metrics": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "failure_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_repairs",
+        "schema_error",
+        "permission_error",
+        "verification_failure"
+      ],
+      "properties": {
+        "max_repairs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "schema_error": {
+          "enum": [
+            "repair_then_stop"
+          ]
+        },
+        "permission_error": {
+          "enum": [
+            "stop_without_retry"
+          ]
+        },
+        "verification_failure": {
+          "enum": [
+            "report_incomplete"
+          ]
+        }
+      }
+    },
+    "maturity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "runtime_scope",
+        "claim_boundary"
+      ],
+      "properties": {
+        "level": {
+          "const": "executable_contract"
+        },
+        "runtime_scope": {
+          "const": "validation_and_dry_run_planning"
+        },
+        "claim_boundary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

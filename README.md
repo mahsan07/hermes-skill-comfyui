@@ -71,3 +71,22 @@ This is a public reference workflow extracted from a larger private workbench. I
 ## Contributing
 
 Contributions should improve capability accuracy, safe defaults, reproducible examples, or verification evidence without broadening the skill beyond its stated purpose. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+<!-- JIT-HARNESS:START -->
+## Executable harness contract
+
+This repository now includes a typed, task-adaptive harness contract for **ComfyUI**. The contract maps the skill to memory, planning, capability-orchestration, and action modules; defines bounded repair and stop behavior; and records skill-specific verification evidence.
+
+```bash
+python3 scripts/validate_harness.py
+python3 scripts/run_harness.py examples/task.json
+python3 -m unittest discover -s tests -p 'test_*.py'
+```
+
+The included runner performs validation and dry-run planning only. Live tool or service execution requires a separately reviewed adapter and measured evidence.
+
+- [Task-adaptive harness guide](docs/JIT-HARNESS.md)
+- [Typed harness manifest](harness/manifest.json)
+- [JSON Schema](harness/harness.schema.json)
+- [Example task](examples/task.json)
+<!-- JIT-HARNESS:END -->

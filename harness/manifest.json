@@ -1,0 +1,85 @@
+{
+  "protocol_version": "0.1",
+  "skill": {
+    "id": "hermes-skill-comfyui",
+    "display_name": "ComfyUI",
+    "description": "Generate images, video, and audio with ComfyUI using reproducible workflows and parameter injection."
+  },
+  "task_profile": {
+    "category": "creative",
+    "architecture": "graph",
+    "artifact": "node",
+    "inputs": [
+      "Prompt and source assets",
+      "Model and sampler nodes"
+    ],
+    "outputs": [
+      "Image video or audio output",
+      "Checkpoint loader",
+      "Positive prompt",
+      "KSampler",
+      "VAE decode"
+    ]
+  },
+  "modules": {
+    "memory": {
+      "strategy": "entity_relationship_memory",
+      "responsibility": "Retain prompt and source assets plus decisions, observations, and verification evidence needed to resume safely."
+    },
+    "planning": {
+      "strategy": "dependency_and_path_traversal",
+      "responsibility": "Transform model and sampler nodes into the ordered, bounded stages defined by this skill."
+    },
+    "action": {
+      "strategy": "brief_generate_render_inspect_export",
+      "responsibility": "Advance the workflow through conditioning graph while preserving stop conditions and user authority."
+    },
+    "capability": {
+      "strategy": "task_conditioned_minimum_capability_set",
+      "responsibility": "Expose only the production and rendering capabilities needed for the requested artifact and format."
+    }
+  },
+  "execution": {
+    "stages": [
+      "Choose a compatible workflow and models",
+      "Inject prompts seeds and dimensions",
+      "Wire loaders conditioning sampler and decoder",
+      "Queue the graph on the ComfyUI runtime",
+      "Track node progress and failures",
+      "Inspect metadata and rendered media"
+    ],
+    "gates": [
+      "scope_and_authority_confirmed",
+      "capability_and_dependency_preflight",
+      "consequential_action_previewed_when_applicable",
+      "output_reopened_and_verified"
+    ]
+  },
+  "verification": {
+    "evidence": [
+      "Checkpoint loader",
+      "Positive prompt",
+      "KSampler",
+      "VAE decode"
+    ],
+    "metrics": [
+      "task_success",
+      "verification_pass_rate",
+      "tool_error_rate",
+      "repair_count",
+      "latency_ms",
+      "estimated_cost_usd"
+    ]
+  },
+  "failure_policy": {
+    "max_repairs": 2,
+    "schema_error": "repair_then_stop",
+    "permission_error": "stop_without_retry",
+    "verification_failure": "report_incomplete"
+  },
+  "maturity": {
+    "level": "executable_contract",
+    "runtime_scope": "validation_and_dry_run_planning",
+    "claim_boundary": "This repository validates and plans the harness contract; it does not claim live service execution or benchmark gains without a connected adapter and measured evidence."
+  }
+}
